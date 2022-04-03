@@ -1,10 +1,15 @@
 import express from "express";
+import * as path from 'path';
 const app = express();
 import mongoose from "mongoose";
 import config from "./server/config/config.js";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import discordApi from "./server/backend/discord/discord.route.js";
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 app.use(express.static(path.join(__dirname, 'build')));
 app.get('/*', (req, res) => {
