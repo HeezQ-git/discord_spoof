@@ -21,7 +21,8 @@
         "librus-api": "^2.5.0",
         "mongoose": "^5.12.15",
         "node-fetch": "^3.2.3",
-        "validate-polish": "^2.0.40"
+        "validate-polish": "^2.0.40",
+        "nodemon": "^2.0.7"
     },
     "devDependencies": {
         "http-proxy-middleware": "^2.0.1",
