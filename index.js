@@ -6,6 +6,10 @@ import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import discordApi from "./server/backend/discord/discord.route.js";
 
+app.use(express.static(path.join(__dirname, 'build')));
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  });
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json({ limit: "2mb" }));
 app.use(cookieParser());
