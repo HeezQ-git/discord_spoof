@@ -8,7 +8,7 @@ mongoose.set("useFindAndModify", false);
 
 const dbCredencials = {
     user: "HeezQ",
-    pass: "Technischools!",
+    pass: "",
 };
 const hostDB = `mongodb+srv://${dbCredencials.user}:${dbCredencials.pass}@cluster0.yvidg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
