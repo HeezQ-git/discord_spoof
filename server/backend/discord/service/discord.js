@@ -29,10 +29,7 @@ const connectToDiscord = async (req, res) => {
         method: "POST",
     });
 
-    console.log(answer);
     const resp = await JSON.parse(await answer.text());
-    console.log('---');
-    console.log(resp);
 
     if (resp.token) {
         response.success = true;
